@@ -1,67 +1,68 @@
-An advanced machine learning approach to predicting national happiness scores worldwide using tree-based models, ensemble learning, and deep learning in Python & R.
+A data-driven analysis exploring the key factors influencing national happiness scores worldwide using multiple linear regression and statistical modeling in R.
 
-📌 Project Overview
-This project explores the relationship between economic, demographic, and social factors and happiness levels across different countries. Using data from the World Happiness Report (2021) and World Data by Country (2020), we apply statistical analysis and machine learning models to determine the most influential variables in predicting happiness scores.
-
-The project originally used multiple linear regression, but we have now upgraded it with advanced ML models, including Random Forest, Gradient Boosting (XGBoost, LightGBM), and Artificial Neural Networks (ANNs) to improve prediction accuracy.
+🚀 Project Overview
+This project investigates the relationship between economic, demographic, and social factors and happiness levels across different countries. Using data from the World Happiness Report (2021) and World Data by Country (2020), the study applies data cleaning, exploratory data analysis (EDA), correlation analysis, and predictive modeling to determine the most influential variables in predicting happiness scores.
 
 🎯 Objective
-Identify key factors contributing to national happiness.
-Compare traditional regression models vs modern ML models.
-Develop an optimized predictive model for happiness scores.
-Use SHAP values & feature importance for model interpretability.
-
-🛠️ Tools & Technologies
-Programming Languages: R, Python
-Machine Learning Models:
-Linear Regression (Baseline)
-Random Forest Regressor
-XGBoost & LightGBM
-Artificial Neural Network (ANN)
-Key Libraries:
-R: tidyverse, ggplot2, corrplot, GGally
-Python: pandas, scikit-learn, xgboost, lightgbm, tensorflow, shap
-Visualization Tools: matplotlib, seaborn, plotly
+Identify key factors that contribute to a nation's happiness.
+Develop a predictive model for happiness scores using multiple linear regression.
+Compare different models to evaluate accuracy and interpretability.
+Use statistical hypothesis testing to validate assumptions about happiness determinants.
 
 📊 Data Sources
-World Happiness Report 2021
-World Data by Country 2020
+World Happiness Report 2021 – Contains happiness scores for various countries.
+World Data by Country 2020 – Includes socioeconomic indicators such as GDP per capita, urbanization rates, life expectancy, and more.
+
+🛠️ Tools and Technologies
+Programming Language: R
+
+Key Libraries:
+📊 ggplot2, tidyverse, corrplot, GGally – Data visualization and EDA
+🔢 stats, caTools – Statistical modeling and regression analysis
+🗺️ maps, ggsci – Geospatial analysis and mapping
+📈 reshape2, corrgram – Correlation analysis and heatmaps
 
 📌 Methodology
-Data Cleaning & Feature Engineering
+Data Cleaning & Preparation
 
-Merge datasets, handle missing values, rename variables
-Assign continents for regional comparisons
+Merging datasets from different sources
+Handling missing values and renaming columns
+Assigning countries to continents for comparative analysis
 Exploratory Data Analysis (EDA)
 
-Correlation heatmaps to identify key predictors
-Geospatial visualization of happiness distribution
-Machine Learning Modeling
+Correlation heatmaps to identify key factors influencing happiness
+Geospatial visualization of global happiness distribution
+Comparative analysis of happiness across continents
+Statistical Modeling & Hypothesis Testing
 
-Baseline: Linear Regression
-Advanced ML Models:
-Random Forest Regressor
-XGBoost & LightGBM
-Artificial Neural Networks (ANNs)
-Model Evaluation & Comparison
+Building multiple linear regression models to predict happiness scores
+Evaluating the significance of variables (GDP per capita, life expectancy, urbanization, etc.)
+Performing residual diagnostics to validate model assumptions
+Model Comparison & Performance Evaluation
 
-RMSE, R², MAE scores
-SHAP value analysis for interpretability
-Final Model Deployment
-
-Best-performing model selected
-Interactive dashboard for prediction (Future Work)
+Comparing Adjusted R² scores to determine the best model
+Analyzing the impact of log transformations on model accuracy
+Visualizing predicted vs. actual happiness scores
 
 🔍 Key Findings
-Life Expectancy & GDP per Capita remain the most important happiness predictors.
-XGBoost performed best, outperforming linear regression by 10%+ accuracy.
-SHAP values confirm feature importance, enhancing model interpretability.
+Life Expectancy and GDP per Capita are the strongest predictors of happiness.
+Urbanization rate has a weaker correlation with happiness compared to GDP and life expectancy.
+South Asia and Africa have the lowest happiness scores, while North America, Europe, and Australia rank highest.
+Linear regression models achieved ~67% accuracy in predicting happiness scores.
 
-🚀 Next Steps
-Deploy an interactive web app with Streamlit.
-Experiment with deep learning models (LSTMs, Transformers).
-Fine-tune models using Optuna for hyperparameter optimization.
+🏆 Best Model for Prediction
+After testing multiple models, Model-2 (GDP per capita + Life Expectancy) was identified as the most accurate and interpretable predictor of happiness scores.
 
-🤝 Contributions
-This project is open for collaboration! Feel free to fork the repo, improve models, or add new data sources for more insights.
+Model	Adjusted R²	Key Variables
+Model-1 (GDP + Urbanization + Life Expectancy)	0.6618	GDP, Life Expectancy
+Model-2 (GDP + Life Expectancy)	0.6550	GDP, Life Expectancy
+Model-3 (GDP + Urbanization + Life Expectancy + Suicide Rate + Population Growth)	0.6550	GDP, Life Expectancy
+
+🏗️ Future Enhancements
+Implement machine learning models (Random Forest, XGBoost) to improve prediction accuracy.
+Use feature engineering to extract additional insights from demographic variables.
+Explore clustering techniques (e.g., K-Means) to categorize countries based on happiness determinants.
+
+🤝 Contribution
+If you're interested in expanding this analysis, feel free to fork the repository and submit pull requests. Suggestions for incorporating deep learning, NLP, or alternative datasets are welcome!
 
